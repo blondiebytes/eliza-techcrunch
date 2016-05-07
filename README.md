@@ -1,5 +1,8 @@
 # Project Eliza: TechCrunch NYC Hackathon 2016 
 
+## Inspiration
+Personal Anxiety + Marsha from "Planet of Storms" (a 1961 Russian Sci-Fi film). In "Planet of Storms," Marsha conveys her thoughts through a voice journal. What if we could get data from what she says? What if we could use that data to help determine if a person is at risk for a mental disorder? Meet E L I Z A. 
+
 ## Mission Statement
 To be able to provide users with a psychotherapist at their fingertips to help track their mental health.
 
