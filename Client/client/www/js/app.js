@@ -47,7 +47,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent': {
           templateUrl: 'templates/results.html',
-          controller: 'ResultsCtrl'
+          controller: 'ResultsController'
         }
       }
     })
@@ -57,7 +57,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     views: {
       'menuContent': {
         templateUrl: 'templates/previousResults.html',
-        controller: 'PreviousResultsCtrl'
+        controller: 'PreviousResultsController'
       }
     }
   });

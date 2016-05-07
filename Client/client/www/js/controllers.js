@@ -56,7 +56,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ResultsController', function($scope, $stateParams) {
+.controller('ResultsController', function($scope, $http, $stateParams) {
   // TODO
 })
 
