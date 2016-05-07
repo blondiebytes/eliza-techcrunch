@@ -117,14 +117,14 @@ $scope.testPost = function() {
   $scope.vm.options = {  
    chart: {
     type: 'pieChart',
-    height: 440,
+    height: 420,
     x: function(d){return d.key;},
     y: function(d){return d.y;},
     showLabels: false,
     duration: 500,
     labelThreshold: 0.01,
     labelSunbeamLayout: true,
-    width: 400,
+    width: 375,
     title: 'E L I Z A',
     donut: true,
     tooltips: false,

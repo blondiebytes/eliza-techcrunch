@@ -5,7 +5,7 @@ text {
 }
 
 .space {
-	padding: 75px;
+	padding: 68px;
 }
 
 .home {
@@ -59,13 +59,13 @@ a {
 
 .results-buttons {
 	margin-top: 25px;
-	margin-left: 20px;
+	margin-left: 10px;
 	text-decoration: none;
 }
 
 .results-button {
 	margin-right: 15px;
-	margin-left: 15px;
+	margin-left: 11px;
 }
 
 
