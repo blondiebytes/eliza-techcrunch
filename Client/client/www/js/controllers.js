@@ -56,7 +56,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ResultsController', function($scope, $http, $stateParams) {
+.controller('ResultsController', function($scope, $http, $stateParams, $ionicPopup) {
      // When button is clicked, the popup will be shown...
     $scope.showAlert = function() {
   

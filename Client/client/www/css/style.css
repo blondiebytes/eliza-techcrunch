@@ -52,6 +52,11 @@ a {
 	text-decoration: none;
 }
 
+.results-statement {
+	margin-top: -20px;
+	margin-bottom: 20px;
+}
+
 .results-buttons {
 	margin-top: 25px;
 	margin-left: 20px;
@@ -60,7 +65,7 @@ a {
 
 .results-button {
 	margin-right: 15px;
-	margin-left: 15px;
+	margin-left: 20px;
 }
 
 
