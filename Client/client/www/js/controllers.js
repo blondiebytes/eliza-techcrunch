@@ -52,5 +52,14 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-});
+.controller('HomeController', function($scope) {
+  // TODO
+})
+
+.controller('ResultsController', function($scope, $stateParams) {
+  // TODO
+})
+
+.controller('PreviousResultsController', function($scope) {
+  // TODO
+})
