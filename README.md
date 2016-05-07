@@ -18,8 +18,13 @@ Secondary: Users who have mental disorders.
 
 ## Technologies:
 Platform: iPhone, Android, Web
+
 Client Side: Ionic, AngularJS, HTML, CSS
+
 Server Side: Node.js, Hapi.js, Swagger, Joi
+
 Database: MongoDB, Mongoose
-Services and Technologies: IBM Watson: Speech to Text, Personality Insights; D3;
+
+Services and Technologies: IBM Watson: Speech to Text, Personality Insights; D3
+
 Cloud Host Provider: IBM 
