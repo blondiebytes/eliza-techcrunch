@@ -36,7 +36,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/home',
     views: {
       'menuContent': {
-        templateUrl: 'templates/home.html'
+        templateUrl: 'templates/home.html',
         controller: 'HomeController'
       }
     }
@@ -61,6 +61,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   });
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 });

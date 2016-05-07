@@ -1,1 +1,9 @@
-/* Empty. Add your own CSS if you like */
+/* CSS */
+
+text {
+  font: 10px sans-serif;
+}
+
+.space {
+	padding: 75px;
+}
