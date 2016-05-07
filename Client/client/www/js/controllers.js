@@ -42,13 +42,43 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('HomeController', function($scope, $state) {
+.controller('HomeController', function($scope, $state, $http, $ionicPopup) {
+  // Post
+  var captureError = function(e) {
+    console.log('captureError' ,e);
+}
+
+var captureSuccess = function(e) {
+    console.log('captureSuccess');
+    console.dir(e);
+    // save the capture and send to watson
+}
+
+$scope.testPost = function() {
+
+    var link = 'http://85dbb56e.ngrok.io/api/user';
+    $http.post(link, {title:"hello",upvotes:"0"})
+
+    .success(function (res){
+       var alertPopup = $ionicPopup.alert({
+        title: 'Recording finished! Success!'
+        });
+     }) 
+
+    .error(function(data) {
+       var alertPopup = $ionicPopup.alert({
+        title: 'Recording finished! ERROR!'
+        });
+    });
+} 
+
   // For recording
   $scope.recording = false;
 
   $scope.record = function($state) {
     if ($scope.recording) {
       // Post the data
+      $scope.testPost();
 
     }
     $scope.recording = !$scope.recording;
@@ -57,6 +87,20 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ResultsController', function($scope, $http, $stateParams, $ionicPopup) {
+     // GET REQUEST
+      $http.get("http://85dbb56e.ngrok.io/api/user", { params: { "key1": "value1", "key2": "value2","key3": "value3" } })
+        .success(function(data) {
+              var alertPopup = $ionicPopup.alert({
+                  title: "Success! Incoming data is:\n\n" + data.data[0].title +"\n\n"
+              });
+        })
+        .error(function(data) {
+            var alertPopup = $ionicPopup.alert({
+                title: "ERROR: " + data
+            });
+        });
+
+
      // When button is clicked, the popup will be shown...
     $scope.showAlert = function() {
   
