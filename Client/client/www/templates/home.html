@@ -2,23 +2,26 @@
   <ion-content>
   <div class="background-image"></div>
   <div class="home text-center">
-  	<button class="button button-block button-stable">
+  	<button class="button button-block button-stable homeButton1">
    		Press the button to record an entry  
 	</button>
 
 	<div class="space">
 	</div>
 
-	  <button class="button button-large button-assertive" ng-click="record()">
-         <i class="icon ion-arrow-right-b"></i>
+	  <button class="button button-large button-assertive recordButton" ng-click="record()">
+          <i ng-class="!recording ? 'icon ion-arrow-right-b' : 'icon ion-ios-circle-filled' "></i>
       </button>
 
 	<div class="space">
 	</div>
 
-	<button class="button button-block button-stable">
-   		Track your progress <i class="icon ion-pie-graph"></i>
-	</button>
+	<a nav-transition="android" href="#/app/results">
+		<button class="button button-block button-stable homeButton2">
+   			Track your progress <i class="icon ion-pie-graph"></i>
+		</button>
+	</a>
+
 	</div>
 
   </ion-content>

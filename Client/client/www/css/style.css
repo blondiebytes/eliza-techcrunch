@@ -29,3 +29,32 @@ text {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
+
+.recordButton {
+	border-radius: 50px;
+	width: 100px;
+	height: 100px;
+	font-size: 100px !important;
+	box-shadow: 3px 3px 5px #000000;
+}
+
+.homeButton1 {
+	opacity: .8;
+	box-shadow: 3px 3px 5px #000000;
+}
+
+.homeButton2 {
+	opacity: .9;
+	box-shadow: 3px 3px 5px #000000;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+
+
+
+
