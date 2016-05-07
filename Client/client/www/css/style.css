@@ -52,6 +52,17 @@ a {
 	text-decoration: none;
 }
 
+.results-buttons {
+	margin-top: 25px;
+	margin-left: 20px;
+	text-decoration: none;
+}
+
+.results-button {
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
 
 
 

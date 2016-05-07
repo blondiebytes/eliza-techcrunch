@@ -57,7 +57,78 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ResultsController', function($scope, $http, $stateParams) {
-  // TODO
+     // When button is clicked, the popup will be shown...
+    $scope.showAlert = function() {
+  
+      var alertPopup = $ionicPopup.alert({
+        title: 'Results sent!'
+      });
+
+    
+   }
+
+  // ---- D3 ----
+  $scope.vm = {};
+  // ---- D3 (Options) ----
+  $scope.vm.options = {  
+   chart: {
+    type: 'pieChart',
+    height: 440,
+    x: function(d){return d.key;},
+    y: function(d){return d.y;},
+    showLabels: false,
+    duration: 500,
+    labelThreshold: 0.01,
+    labelSunbeamLayout: true,
+    width: 400,
+    title: 'E L I Z A',
+    donut: true,
+    tooltips: false,
+    legend: {
+      margin: {
+        top: 20,
+        right: 0,
+        bottom: 20,
+        left: -10
+      }
+    }
+  }
+  }
+  // ---- D3 (DATA) ----
+  $scope.vm.data = [  
+  {
+    key: "Stress",
+    y: 5
+  },
+  {
+    key: "Sad",
+    y: 2
+  },
+  {
+    key: "Impulsive",
+    y: 9
+  },
+  {
+    key: "Stubborn",
+    y: 7
+  },
+  {
+    key: "Self-Conscious",
+    y: 4
+  },
+  {
+    key: "Cheerfulness",
+    y: 2
+  },
+  {
+    key: "Pleasure",
+    y: .5
+  },
+  {
+    key: "Curiosity",
+    y: 1
+  }
+];
 })
 
 .controller('PreviousResultsController', function($scope) {

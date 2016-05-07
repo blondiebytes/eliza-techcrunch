@@ -1,6 +1,31 @@
-<ion-view view-title="Results">
+<ion-view view-title="R E S U L T S">
   <ion-content>
-    <!-- CONTENT TO DO -->
-    <h1>hi</h1>
+
+    <div class="results-chart">
+    	<nvd3 options="vm.options" data="vm.data"></nvd3>
+    </div>
+
+    <div class="results-statement">
+    	<button class="button button-full button-dark">
+    		You are most suseptible to: Anxiety
+    	</button>
+    </div>
+
+    <div class="results-button">
+    	<div class="button-bar text-center">
+    		<a class="results-button" nav-transition="android" href="#/app/previousResults">
+    			<button class="button button-block button-royal">
+    			Previous Results
+    			</button>
+    		</a>
+    		<a class="results-button" nav-transition="android">
+    			<button class="button button-block button-assertive" ng-click="showAlert()">
+    			Send to Doctor
+    			</button>
+    		</a>
+    	</div>
+    </div>
+
+
   </ion-content>
 </ion-view>
