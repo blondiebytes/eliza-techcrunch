@@ -1,5 +1,27 @@
 <ion-view view-title="E L I Z A">
   <ion-content class="text-center">
+  <div class = "results-statement">
+      <button id="diagnosis" class= "button button-full button-royal">
+        Showing signs of Anxiety : 20 Days Till App.
+      </button>
+    </div>
+  	<div "results-chart">
+  	 	<nvd3 options="vm.options" data="vm.data"></nvd3>
+  	</div>
+  	<div class="results-buttons">
+  		<div class="button-bar text-center">
+   			  <a class="results-button" nav-transition="android">
+          		<button class="button button-block button-royal history-button">
+             		History
+          		</button>
+      		  </a>
+   			<a class="results-button" nav-transition="android">
+          		<button class="button button-block button-assertive call-button" ng-click="call()">
+             		Call
+          		</button>
+      		</a>
+		</div>
+  	</div>
 
   </ion-content>
 </ion-view>

@@ -3,10 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *"> 
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    
+<!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+      <!-- ionic/angular resource -->
+    <script src="lib/ionic/js/angular/angular-resource.min.js"></script>
+
+    <script src="lib/d3/d3.js"></script>  
+    <script src="lib/nvd3/build/nv.d3.min.js"></script>  
+    <script src="lib/angular-nvd3/dist/angular-nvd3.min.js"></script>  
+    <link rel="stylesheet" href="lib/nvd3/build/nv.d3.css">  
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">

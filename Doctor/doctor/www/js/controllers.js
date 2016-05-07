@@ -45,6 +45,80 @@ angular.module('starter.controllers', [])
   // TO DO
 })
 
-.controller('ResultsController', function($scope, $stateParams) {
-  // TO DO
-});
+.controller('ResultsController', function($scope, $http, $stateParams, $ionicPopup) {
+     // GET REQUEST
+      $http.get("http://85dbb56e.ngrok.io/api/user", { params: { "key1": "value1", "key2": "value2","key3": "value3" } })
+        .success(function(data) {
+           //   var alertPopup = $ionicPopup.alert({
+           //       title: "Success! Incoming data is:\n\n" + data.data[0].title +"\n\n"
+           //   });
+        })
+        .error(function(data) {
+           // var alertPopup = $ionicPopup.alert({
+           //     title: "ERROR: " + data
+           // });
+        });
+
+  // ---- D3 ----
+  $scope.vm = {};
+  // ---- D3 (Options) ----
+  $scope.vm.options = {  
+   chart: {
+    type: 'pieChart',
+    height: 440,
+    x: function(d){return d.key;},
+    y: function(d){return d.y;},
+    showLabels: false,
+    duration: 500,
+    labelThreshold: 0.01,
+    labelSunbeamLayout: true,
+    width: 400,
+    title: 'K A T H R Y N',
+    donut: true,
+    tooltips: false,
+    legend: {
+      margin: {
+        top: 20,
+        right: 0,
+        bottom: 20,
+        left: -10
+      }
+    }
+  }
+  }
+  // ---- D3 (DATA) ----
+  $scope.vm.data = [  
+  {
+    key: "Stress",
+    y: 5
+  },
+  {
+    key: "Sad",
+    y: 2
+  },
+  {
+    key: "Impulsive",
+    y: 9
+  },
+  {
+    key: "Stubborn",
+    y: 7
+  },
+  {
+    key: "Self-Conscious",
+    y: 4
+  },
+  {
+    key: "Cheerfulness",
+    y: 2
+  },
+  {
+    key: "Pleasure",
+    y: .5
+  },
+  {
+    key: "Curiosity",
+    y: 1
+  }
+];
+})
