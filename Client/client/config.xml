@@ -9,10 +9,10 @@
     </author>
   <content src="index.html"/>
   <access origin="*"/>
-  <allow-navigation href="http://*/*" />
-  <allow-navigation href="https://*/*" />
-  <allow-navigation href="data:*" />
-  <allow-intent href="*" />
+  <allow-navigation href="http://*/*"/>
+  <allow-navigation href="https://*/*"/>
+  <allow-navigation href="data:*"/>
+  <allow-intent href="*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
@@ -20,6 +20,7 @@
   <preference name="FadeSplashScreenDuration" value="1000"/>
   <preference name="android-minSdkVersion" value="16"/>
   <preference name="BackupWebStorage" value="none"/>
+  <preference name="SplashScreen" value="screen"/>
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
@@ -40,5 +41,17 @@
     <splash src="resources/ios/splash/Default@2x~iphone.png" width="640" height="960"/>
     <splash src="resources/ios/splash/Default~iphone.png" width="320" height="480"/>
   </platform>
-  <icon src="resources/ios/icon/icon-small@3x.png"/>
+  <platform name="android">
+    <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
+    <icon src="resources/android/icon/drawable-mdpi-icon.png" density="mdpi"/>
+    <icon src="resources/android/icon/drawable-hdpi-icon.png" density="hdpi"/>
+    <icon src="resources/android/icon/drawable-xhdpi-icon.png" density="xhdpi"/>
+    <splash src="resources/android/splash/drawable-land-ldpi-screen.png" density="land-ldpi"/>
+    <splash src="resources/android/splash/drawable-land-mdpi-screen.png" density="land-mdpi"/>
+    <splash src="resources/android/splash/drawable-port-ldpi-screen.png" density="port-ldpi"/>
+    <splash src="resources/android/splash/drawable-port-mdpi-screen.png" density="port-mdpi"/>
+    <splash src="resources/android/splash/drawable-port-hdpi-screen.png" density="port-hdpi"/>
+    <splash src="resources/android/splash/drawable-port-xhdpi-screen.png" density="port-xhdpi"/>
+  </platform>
+  <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
 </widget>
