@@ -46,79 +46,105 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ResultsController', function($scope, $http, $stateParams, $ionicPopup) {
-     // GET REQUEST
-      $http.get("http://85dbb56e.ngrok.io/api/user", { params: { "key1": "value1", "key2": "value2","key3": "value3" } })
-        .success(function(data) {
-           //   var alertPopup = $ionicPopup.alert({
-           //       title: "Success! Incoming data is:\n\n" + data.data[0].title +"\n\n"
-           //   });
-        })
-        .error(function(data) {
-           // var alertPopup = $ionicPopup.alert({
-           //     title: "ERROR: " + data
-           // });
-        });
 
-  // ---- D3 ----
-  $scope.vm = {};
-  // ---- D3 (Options) ----
-  $scope.vm.options = {  
-   chart: {
-    type: 'pieChart',
-    height: 440,
-    x: function(d){return d.key;},
-    y: function(d){return d.y;},
-    showLabels: false,
-    duration: 500,
-    labelThreshold: 0.01,
-    labelSunbeamLayout: true,
-    width: 400,
-    title: 'K A T H R Y N',
-    donut: true,
-    tooltips: false,
-    legend: {
-      margin: {
-        top: 20,
-        right: 0,
-        bottom: 20,
-        left: -10
+  var disorder = "";
+  var Anxiety, Depression, Bipolar, ADHD, OCD = "";
+  $scope.stress = 19;
+  $scope.melancholy = 40; 
+  $scope.impulsiveness = 36;
+  $scope.uncompromising = 48;
+  $scope.elfcon = 33;
+  $scope.cheerfulness = 29; 
+  $scope.pleasure = 57;
+  $scope.curiosity = 36;
+  $scope.getvariables = function() {
+    $http.get("http://67a90940.ngrok.io/api/lod", { params: { "key1": "value1", "key2": "value2","key3": "value3","key4": "value4" ,"key5": "value5" ,"key6": "value6" ,"key7": "value7","key8": "value8"  } })
+      .success(function(data) {
+            var lastitem = data.data.length-1;
+            console.log("lastitem: "+ lastitem);
+            $scope.stress = data.data[lastitem].stress;
+            console.log("stress: " + $scope.stress);
+            $scope.melancholy = data.data[lastitem].melancholy; 
+            console.log("melancholy: " + $scope.melancholy);
+            $scope.impulsiveness = data.data[lastitem].impulsiveness;
+            console.log("impulsiveness: " + $scope.tress);
+            $scope.uncompromising = data.data[lastitem].uncompromising;
+            console.log("uncompromising: " + $scope.uncompromising);
+            $scope.selfcon = data.data[lastitem].selfcon;
+            console.log("selfcon: " + $scope.selfcon);
+            $scope.cheerfulness = data.data[lastitem].cheerfulness; 
+            console.log("cheerfulness: " + $scope.cheerfulness);
+            $scope.pleasure = data.data[lastitem].pleasure;
+            console.log("pleasure: " + $scope.pleasure);
+            $scope.curiosity = data.data[lastitem].curiosity;
+            console.log("curiosity: " + $scope.curiosity );
+    $scope.vm = {};
+    // ---- D3 (Options) ----
+    $scope.vm.options = {  
+     chart: {
+      type: 'pieChart',
+      height: 435,
+      x: function(d){return d.key;},
+      y: function(d){return d.y;},
+      showLabels: false,
+      duration: 500,
+      labelThreshold: 0.01,
+      labelSunbeamLayout: true,
+      width: 375,
+      title: 'K A T H R Y N',
+      donut: true,
+      tooltips: false,
+      legend: {
+        margin: {
+          top: 20,
+          right: 0,
+          bottom: 20,
+          left: -10
+        }
       }
     }
-  }
-  }
-  // ---- D3 (DATA) ----
-  $scope.vm.data = [  
-  {
-    key: "Stress",
-    y: 5
-  },
-  {
-    key: "Sad",
-    y: 2
-  },
-  {
-    key: "Impulsive",
-    y: 9
-  },
-  {
-    key: "Stubborn",
-    y: 7
-  },
-  {
-    key: "Self-Conscious",
-    y: 4
-  },
-  {
-    key: "Cheerfulness",
-    y: 2
-  },
-  {
-    key: "Pleasure",
-    y: .5
-  },
-  {
-    key: "Curiosity",
-    y: 1
-  }
-];
+    }
+    // ---- D3 (DATA) ----
+    $scope.vm.data = [  
+    {
+      key: "Stress",
+      y: $scope.stress
+    },
+    {
+      key: "Sad",
+      y: $scope.melancholy
+    },
+    {
+      key: "Impulsive",
+      y: $scope.impulsiveness
+    },
+    {
+      key: "Stubborn",
+      y: $scope.uncompromising
+    },
+    {
+      key: "Self-Conscious",
+      y: $scope.selfcon
+    },
+    {
+      key: "Cheerfulness",
+      y: $scope.cheerfulness
+    },
+    {
+      key: "Pleasure",
+      y: $scope.pleasure
+    },
+    {
+      key: "Curiosity",
+      y: $scope.curiosity
+    }
+  ];
+      })
+      .error(function(data) {
+          var alertPopup = $ionicPopup.alert({
+              title: "ERROR: " + data
+          });
+      });
+    };
+    $scope.getvariables();
 })
